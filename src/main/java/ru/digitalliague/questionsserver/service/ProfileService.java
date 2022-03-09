@@ -21,6 +21,7 @@ public class ProfileService {
            if (all.isEmpty()) throw new ProfileNotFoundException();
            System.out.println("sd");
            System.out.println("sd");
+           System.out.println("sd");
           return mapper.mapping(all,ProfileDto.class);
        }
 
