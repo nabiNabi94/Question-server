@@ -19,6 +19,7 @@ public class ProfileService {
        public List<ProfileDto> getAllProfile(){
            List<Profile> all = repository.findAll();
            if (all.isEmpty()) throw new ProfileNotFoundException();
+           System.out.println("sd");
           return mapper.mapping(all,ProfileDto.class);
        }
 
