@@ -14,12 +14,12 @@ import java.util.List;
 @AllArgsConstructor
 public class ProfileService {
 
-//       private ProfileRepository repository;
-//       private Mapper mapper;
-//       public List<ProfileDto> getAllProfile(){
-//           List<Profile> all = repository.findAll();
-//           if (all.isEmpty()) throw new ProfileNotFoundException();
-//           all.ma
-//       }
+       private ProfileRepository repository;
+       private Mapper mapper;
+       public List<ProfileDto> getAllProfile(){
+           List<Profile> all = repository.findAll();
+           if (all.isEmpty()) throw new ProfileNotFoundException();
+          return mapper.mapping(all,ProfileDto.class);
+       }
 
 }
