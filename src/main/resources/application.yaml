@@ -1,0 +1,30 @@
+spring:
+  jackson:
+    mapper:
+      default-view-inclusion: true
+
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL94Dialect
+      ddl-auto: validate
+      default_batch_fetch_size: 20
+      jdbc.batch_size: 20
+      naming:
+#        implicit-strategy: org.hibernate.boot.model.naming.
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database: postgresql
+
+    show-sql: true
+    open-in-view: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/question-project
+    username: postgres
+    password: postgres
+  liquibase:
+    enabled: true
+    change-log: db/changelog/db.changelog-mastrer.xml
+server:
+  port: 9191
+  servlet:
+    context-path: /question-server

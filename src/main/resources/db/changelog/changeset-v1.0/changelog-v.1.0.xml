@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+    <include file="changeset-create-questions-table-v.1.0.xml" relativeToChangelogFile="true"/>
+    <include file="changeset-create-answers-table-v.1.0.xml" relativeToChangelogFile="true"/>
+    <include file="changeset-create-level-table-v.1.0.xml" relativeToChangelogFile="true"/>
+    <include file="changeset-create-profile-table-v.1.0.xml" relativeToChangelogFile="true"/>
+<!--    <include file="changeset-create-test-table-v.1.0.xml" relativeToChangelogFile="true"/>-->
+    <include file="changeset-create-constraint-table-v.1.0.xml" relativeToChangelogFile="true"/>
+    <include file="changeset-insert-level-table-v.1.0.xml" relativeToChangelogFile="true"/>
+    <include file="changeset-insert-profile-table-v.1.0.xml" relativeToChangelogFile="true"/>
+<!--    <include file="changeset-insert-test-table-v.1.0.xml" relativeToChangelogFile="true"/>-->
+    <include file="changeset-insert-questions-table-v.1.0.xml" relativeToChangelogFile="true"/>
+    <include file="changeset-insert-answers-table-v.1.0.xml" relativeToChangelogFile="true"/>
+
+
+</databaseChangeLog>

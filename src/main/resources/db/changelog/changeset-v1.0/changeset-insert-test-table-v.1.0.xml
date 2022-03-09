@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="insert-tests-table" author="V.Nabiev">
+        <insert tableName="tests">
+            <column name="test_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="test_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="tests">
+            <column name="test_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="test_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="tests">
+            <column name="test_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="test_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="tests">
+            <column name="test_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="test_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>
+        </insert>
+        <insert tableName="tests">
+            <column name="test_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="test_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>
+        </insert>
+        <insert tableName="tests">
+            <column name="test_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="test_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>
+        </insert>
+
+
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="create-tests-table" author="V.Nabiev">
+        <sqlFile dbms="postgresql"
+                 encoding="utf8"
+                 endDelimiter="\nGO"
+                 splitStatements="true"
+                 stripComments="true"
+                 path="create-tests-table-v.1.0.sql"
+                 relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     encoding="utf8"
+                     endDelimiter="\nGO"
+                     splitStatements="true"
+                     stripComments="true"
+                     path="drop-tests-table-v.1.0.sql"
+                     relativeToChangelogFile="true"/>
+
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

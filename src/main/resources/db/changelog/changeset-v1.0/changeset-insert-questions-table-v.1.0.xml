@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="insert-questions-table" author="V.Nabiev">
+
+                    <!--        Developer question -->
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Вы хотите узнать, равны ли две строки или нет, с точки зрения фактических символов в строках. Как лучше всего это сделать?"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Как вы будете инициализировать объект SimpleDateFormat , чтобы следующий код печатал полное название месяца данной даты? System.out.println(sdf.format(new Date()));"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Что из следующего верно в отношении конструктора по умолчанию?"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Что из следующего является/являются действительными двойными значениями для 10 миллионов? (В миллионе 6 нулей)"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Какие из следующих характеристик верны в отношении конструктора по умолчанию?"/>
+            <column name="num_of_corr" value="2"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Какие из следующих также известны как «логические операторы короткого замыкания»?"/>
+            <column name="num_of_corr" value="2"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Определите правильные утверждения о двумерном массиве."/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Рассмотрим следующий класс...
+
+class MyString extends String{
+   MyString(){ super(); }
+}
+
+
+Приведенный выше код не будет компилироваться."/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>        </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Приведите примеры автобоксинга."/>
+            <column name="num_of_corr" value="3"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>        </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Какой класс объектов может быть объявлен с помощью предложения throws?"/>
+            <column name="num_of_corr" value="3"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?"/>
+            <column name="num_of_corr" value="2"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Какие интерфейсы расширяет java.util.NavigableMap прямо или косвенно?"/>
+            <column name="num_of_corr" value="2"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Какое из этих определений является правильным определением класса Car, который не может быть подклассом?"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Учитывая следующее объявление, выберите правильный способ получения количества элементов в массиве, предполагая, что массив был инициализирован.
+        int[] intArr;"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Метод без модификатора доступа, определенный в классе, может быть переопределен методом, помеченным как protected (при условии, что он не является final) в подклассе."/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Какой из следующих стандартных функциональных интерфейсов возвращает void?"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Developer')"/>
+        </insert>
+
+
+                    <!--        Analyst question -->
+
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="В соответствии с ISO 9000:2000 бизнес процесс это:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>
+        </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Заказчик процесса это должностное лицо, которое:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Владелец процесса это должностное лицо, которое имеет в своем распоряжении:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Ответственность за доставку выхода процесса потребителю несет:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Процессы подбора персонала относятся к группе:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Junior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Интерфейсом в моделировании бизнес процессов называют точку:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Для того, чтобы получить описание системы, помимо взаимодействующих компонент необходимо описать:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>          </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Правильным определением модели является:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>          </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Целью построения модели системы является:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>          </insert>
+        <insert tableName="questions">
+            <column name="que_name" value="Гарантией актуальности модели является:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Middle')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>          </insert>
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Технологический процесс (workflow) отображает последовательность операций:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>
+        </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Событие на EPC диаграмме определяет, при каких условиях будет:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="EPC диаграмма должна:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Коэффициент распределения затрат в системе ABC определяет:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+
+        <insert tableName="questions">
+            <column name="que_name"
+                    value="Когда объекты затрат неоднородны и объемы деятельности по их производству разные:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+
+        <insert tableName="questions">
+            <column name="que_name" value="Транзакционные коэффициенты распределения стоимости операций используются, если:"/>
+            <column name="num_of_corr" value="1"/>
+            <column name="que_lvl_id" valueComputed="(SELECT lvl_id FROM levels WHERE lvl_name = 'Senior')"/>
+            <column name="que_prof_id" valueComputed="(SELECT prof_id FROM profiles WHERE prof_name = 'Analyst')"/>         </insert>
+
+    </changeSet>
+</databaseChangeLog>

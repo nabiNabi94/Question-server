@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="insert-answers-table" author="V.Nabiev">
+        <insert tableName="answers">
+            <column name="ans_name" value="Используйте метод equals String"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Вы хотите узнать, равны ли две строки или нет, с точки зрения фактических символов в строках. Как лучше всего это сделать?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Используйте оператор =="/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Вы хотите узнать, равны ли две строки или нет, с точки зрения фактических символов в строках. Как лучше всего это сделать?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Используйте метод equalsIgnoreCase String"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Вы хотите узнать, равны ли две строки или нет, с точки зрения фактических символов в строках. Как лучше всего это сделать?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Используйте метод сопоставления String"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Вы хотите узнать, равны ли две строки или нет, с точки зрения фактических символов в строках. Как лучше всего это сделать?')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="SimpleDateFormat sdf = new SimpleDateFormat +(&quot;MMMM&quot;, Locale.FRANCE);"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Как вы будете инициализировать объект SimpleDateFormat , чтобы следующий код печатал полное название месяца данной даты? System.out.println(sdf.format(new Date()));')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="SimpleDateFormat sdf = new SimpleDateFormat(&quot;M*&quot;, Locale.FRANCE);
+            "/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Как вы будете инициализировать объект SimpleDateFormat , чтобы следующий код печатал полное название месяца данной даты? System.out.println(sdf.format(new Date()));')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="SimpleDateFormat sdf = new SimpleDateFormat(&quot;MM&quot;, Locale.FRANCE);
+"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Как вы будете инициализировать объект SimpleDateFormat , чтобы следующий код печатал полное название месяца данной даты? System.out.println(sdf.format(new Date()));')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="SimpleDateFormat sdf = new SimpleDateFormat(&quot;mmm&quot;, Locale.FRANCE);"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Как вы будете инициализировать объект SimpleDateFormat , чтобы следующий код печатал полное название месяца данной даты? System.out.println(sdf.format(new Date()));')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="SimpleDateFormat sdf = new SimpleDateFormat(&quot;mmmm&quot;, Locale.FRANCE);"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Как вы будете инициализировать объект SimpleDateFormat , чтобы следующий код печатал полное название месяца данной даты? System.out.println(sdf.format(new Date()));')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="Он предоставляется компилятором только в том случае, если класс и любой из его суперклассов не определяют никакого конструктора."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего верно в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Не требует аргументов."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего верно в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Конструктор по умолчанию используется для возврата значения по умолчанию."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего верно в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Чтобы определить конструктор по умолчанию, вы должны использовать ключевое слово по умолчанию."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего верно в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Это всегда публично."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего верно в отношении конструктора по умолчанию?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="double d = 10,000,000.0;"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего является/являются действительными двойными значениями для 10 миллионов? (В миллионе 6 нулей)')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="double d = 10-000-000;"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего является/являются действительными двойными значениями для 10 миллионов? (В миллионе 6 нулей)')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="double d = 10_000_000;"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего является/являются действительными двойными значениями для 10 миллионов? (В миллионе 6 нулей)')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="double d = 10 000 000;"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Что из следующего является/являются действительными двойными значениями для 10 миллионов? (В миллионе 6 нулей)')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="Он предоставляется компилятором только в том случае, если класс не определяет никакого конструктора."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих характеристик верны в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Он инициализирует члены экземпляра класса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих характеристик верны в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Он вызывает конструктор суперкласса без аргументов."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих характеристик верны в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Он инициализирует экземпляр, а также поля класса класса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих характеристик верны в отношении конструктора по умолчанию?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Он предоставляется компилятором, если класс не определяет конструктор без аргументов."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих характеристик верны в отношении конструктора по умолчанию?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="&amp;"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих также известны как «логические операторы короткого замыкания»?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="||"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих также известны как «логические операторы короткого замыкания»?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="&amp;&amp;"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих также известны как «логические операторы короткого замыкания»?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="|"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих также известны как «логические операторы короткого замыкания»?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="^"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие из следующих также известны как «логические операторы короткого замыкания»?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="Это похоже на прямоугольную матрицу, в которой количество строк и количество столбцов могут быть разными, но каждая строка или каждый столбец имеют одинаковое количество элементов."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите правильные утверждения о двумерном массиве.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Это похоже на квадратную матрицу, в которой количество строк и количество столбцов одинаково, и каждая строка или каждый столбец имеют одинаковое количество элементов."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите правильные утверждения о двумерном массиве.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Количество строк и столбцов должно быть указано во время его объявления."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите правильные утверждения о двумерном массиве.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="По сути, это массив массивов"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите правильные утверждения о двумерном массиве.')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="True"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Рассмотрим следующий класс...
+
+class MyString extends String{
+   MyString(){ super(); }
+}
+
+
+Приведенный выше код не будет компилироваться.')"/>        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="False"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Рассмотрим следующий класс...
+
+class MyString extends String{
+   MyString(){ super(); }
+}
+
+
+Приведенный выше код не будет компилироваться.')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="Float f = 2.0;"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Приведите примеры автобоксинга.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Float f = 2.0f;"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Приведите примеры автобоксинга.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Byte b = 2;"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Приведите примеры автобоксинга.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Character c = 2;"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Приведите примеры автобоксинга.')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="String s = &quot;x&quot;"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Приведите примеры автобоксинга.')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="Exception"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой класс объектов может быть объявлен с помощью предложения throws?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Error"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой класс объектов может быть объявлен с помощью предложения throws?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Event"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой класс объектов может быть объявлен с помощью предложения throws?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Object"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой класс объектов может быть объявлен с помощью предложения throws?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="RuntimeException"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой класс объектов может быть объявлен с помощью предложения throws?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.HashMap"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.Set"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.SortedSet"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.Map"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.SortedMap"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.TreeMap"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Определите конкретные классы, которые можно использовать для хранения пар ключ-значение?')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.SortedSet"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие интерфейсы расширяет java.util.NavigableMap прямо или косвенно?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.Map"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие интерфейсы расширяет java.util.NavigableMap прямо или косвенно?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.SortedMap"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие интерфейсы расширяет java.util.NavigableMap прямо или косвенно?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.List"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие интерфейсы расширяет java.util.NavigableMap прямо или косвенно?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="java.util.TreeMap"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какие интерфейсы расширяет java.util.NavigableMap прямо или косвенно?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="class Car { }"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какое из этих определений является правильным определением класса Car, который не может быть подклассом?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="abstract class Car { }"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какое из этих определений является правильным определением класса Car, который не может быть подклассом?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="native class Car { }"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какое из этих определений является правильным определением класса Car, который не может быть подклассом?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="static class Car { }"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какое из этих определений является правильным определением класса Car, который не может быть подклассом?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="final class Car { }"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какое из этих определений является правильным определением класса Car, который не может быть подклассом?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="Supplier"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой из следующих стандартных функциональных интерфейсов возвращает void?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Function"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой из следующих стандартных функциональных интерфейсов возвращает void?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Predicate"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой из следующих стандартных функциональных интерфейсов возвращает void?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Consumer"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой из следующих стандартных функциональных интерфейсов возвращает void?')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="UnaryOperator"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Какой из следующих стандартных функциональных интерфейсов возвращает void?')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="intArr[ ].length( )"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Учитывая следующее объявление, выберите правильный способ получения количества элементов в массиве, предполагая, что массив был инициализирован.
+        int[] intArr;')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="intArr.length( )"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Учитывая следующее объявление, выберите правильный способ получения количества элементов в массиве, предполагая, что массив был инициализирован.
+        int[] intArr;')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="intArr.length"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Учитывая следующее объявление, выберите правильный способ получения количества элементов в массиве, предполагая, что массив был инициализирован.
+        int[] intArr;')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="intArr[ ].size( )"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Учитывая следующее объявление, выберите правильный способ получения количества элементов в массиве, предполагая, что массив был инициализирован.
+        int[] intArr;')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="intArr.size( )"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Учитывая следующее объявление, выберите правильный способ получения количества элементов в массиве, предполагая, что массив был инициализирован.
+        int[] intArr;')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="True"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Метод без модификатора доступа, определенный в классе, может быть переопределен методом, помеченным как protected (при условии, что он не является final) в подклассе.')"/>
+
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="False"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Метод без модификатора доступа, определенный в классе, может быть переопределен методом, помеченным как protected (при условии, что он не является final) в подклассе.')"/>
+        </insert>
+
+
+                            <!--        answer analyst-->
+        <insert tableName="answers">
+            <column name="ans_name" value="Взаимосвязанные виды деятельности, преобразующие входы в выходы "/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'В соответствии с ISO 9000:2000 бизнес процесс это:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Совокупность взаимосвязанных и взаимодействующих видов деятельности, преобразующая входы в выходы, представляющие ценность для клиента"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'В соответствии с ISO 9000:2000 бизнес процесс это:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Совокупность разнородных и существенных видов деятельности, преобразующая входы в выходы, которые могут быть полезны для клиента "/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'В соответствии с ISO 9000:2000 бизнес процесс это:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="Множество видов деятельности, объединенных производством одного продукта, услуги "/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'В соответствии с ISO 9000:2000 бизнес процесс это:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="имеет в своем распоряжении средства для заказа выхода бизнес - процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="имеет в своем распоряжении материальные и информационные ресурсы бизнес - процесса, управляет его ходом, несет ответственность за результат и эффективность"/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="имеет в своем распоряжении ресурсы и полномочия для принятия решений о проведении работ по описанию, регламентации или аудиту бизнес - процесса"/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="имеет в своем распоряжении необходимый инструментарий для проектирования бизнес - процессом и его управления."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="средства для заказа выхода бизнес - процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="материальные и информационные ресурсы бизнес - процесса, управляет его ходом, несет ответственность за результат и эффективность."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="ресурсы и полномочия для принятия решений о проведении работ по описанию, регламентации или аудиту бизнес - процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="необходимый инструментарий для проектирования бизнес - процессом и его управления."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="заказчик процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="потребитель процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="исполнитель процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="владелец процесса."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Заказчик процесса это должностное лицо, которое:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="процессы управления."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Процессы подбора персонала относятся к группе:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="операционные процессы."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Процессы подбора персонала относятся к группе:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="поддерживающие процессы."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Процессы подбора персонала относятся к группе:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="взаимодействия компании с внешней средой."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Интерфейсом в моделировании бизнес процессов называют точку:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="перехода между бизнес процессами."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Интерфейсом в моделировании бизнес процессов называют точку:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="взаимодействия с исполнителем."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Интерфейсом в моделировании бизнес процессов называют точку:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="приложения управления бизнес процессом."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Интерфейсом в моделировании бизнес процессов называют точку:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="их количество."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Для того, чтобы получить описание системы, помимо взаимодействующих компонент необходимо описать:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="свойства окружающей среды."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Для того, чтобы получить описание системы, помимо взаимодействующих компонент необходимо описать:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="связи между ними."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Для того, чтобы получить описание системы, помимо взаимодействующих компонент необходимо описать:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="структуру каждой компоненты."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Для того, чтобы получить описание системы, помимо взаимодействующих компонент необходимо описать:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="М есть модель системы S, если М может быть использована для получения ответов на вопросы относительно S с точностью А."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Правильным определением модели является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="М есть модель системы S, если М верно отображает ее структуру."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Правильным определением модели является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="М есть модель системы S, если М может быть использована для получения ответов на вопросы относительно S."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Правильным определением модели является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="М есть модель системы S, если М может быть использована для получения ответов на вопросы о поведении и структуре S."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Правильным определением модели является:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="получения ответов на вопросы относительно нее с заданной точностью."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Целью построения модели системы является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="максимально полного отображения ее структуры."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Целью построения модели системы является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="получения ответов на вопросы о ее поведении и структуре."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Целью построения модели системы является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="получения ответов на вопросы относительно нее, интересующих заказчика."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Целью построения модели системы является:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="строгое соблюдение стандартов при ее построении."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Гарантией актуальности модели является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="процесс итеративного рецензирования."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Гарантией актуальности модели является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="аккуратное выполнение технического задания."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Гарантией актуальности модели является:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="соблюдение требований заказчиков."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Гарантией актуальности модели является:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="некоторой системы, состоящей из одного или нескольких механизмов."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Технологический процесс (workflow) отображает последовательность операций:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="рассматриваемых, как работы некоторой организационной единицы, одного или нескольких механизмов."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Технологический процесс (workflow) отображает последовательность операций:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="рассматриваемых, как работы группы специалистов, участвующих в создании продукту процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Технологический процесс (workflow) отображает последовательность операций:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="исполнителей бизнес - процесса."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Технологический процесс (workflow) отображает последовательность операций:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="исполняться функция или процесс или будет изменен его ход."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Событие на EPC диаграмме определяет, при каких условиях будет:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="исполняться функция или процесс или возможное конечное состояние функции или процесса."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Событие на EPC диаграмме определяет, при каких условиях будет:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="осуществлен переход к другому процессу."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Событие на EPC диаграмме определяет, при каких условиях будет:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="завершен процесс или его возможное конечное состояние."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Событие на EPC диаграмме определяет, при каких условиях будет:')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="начинаться с события и заканчиваться событием."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'EPC диаграмма должна:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="начинаться с определения организационной структуры исполняющей процесс."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'EPC диаграмма должна:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="начинаться и заканчиваться функцией взаимодействия с внешней средой."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'EPC диаграмма должна:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="начинаться с определения входного потока."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'EPC диаграмма должна:')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="величины затрат по центрам ответственности."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Коэффициент распределения затрат в системе ABC определяет:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="интенсивность потребления затрат ресурсами."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Коэффициент распределения затрат в системе ABC определяет:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="распределение инвестиций в портфеле проектов."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Коэффициент распределения затрат в системе ABC определяет:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="распределение затрат по периодам."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Коэффициент распределения затрат в системе ABC определяет:')"/>
+        </insert>
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="расчеты ABC проводить нельзя."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Когда объекты затрат неоднородны и объемы деятельности по их производству разные:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="следует использовать транзакционные коэффициенты распределения стоимости операций."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Когда объекты затрат неоднородны и объемы деятельности по их производству разные:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="в качестве коэффициентов распределения стоимости операций следует использовать коэффициенты длительности."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Когда объекты затрат неоднородны и объемы деятельности по их производству разные:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="в качестве коэффициентов распределения стоимости операций следует использовать коэффициенты интенсивности."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Когда объекты затрат неоднородны и объемы деятельности по их производству разные:')"/>
+        </insert>
+
+
+
+        <insert tableName="answers">
+            <column name="ans_name" value="объекты затрат однотипные и потребляют одинаковые ресурсы."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Транзакционные коэффициенты распределения стоимости операций используются, если:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="для производства объекта затрат используется один и тот же ресурс."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Транзакционные коэффициенты распределения стоимости операций используются, если:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="объекты затрат однотипные, потребление ресурса при производстве одинаковое."/>
+            <column name="ans_check" value="true"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Транзакционные коэффициенты распределения стоимости операций используются, если:')"/>
+        </insert>
+        <insert tableName="answers">
+            <column name="ans_name" value="стоимость используемых ресурсов одинакова."/>
+            <column name="ans_check" value="false"/>
+            <column name="ans_que_id" valueComputed="(SELECT que_id from questions where que_name = 'Транзакционные коэффициенты распределения стоимости операций используются, если:')"/>
+        </insert>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </changeSet>
+</databaseChangeLog>
