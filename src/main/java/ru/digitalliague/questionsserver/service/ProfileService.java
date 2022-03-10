@@ -21,6 +21,7 @@ public class ProfileService {
            if (all.isEmpty()) throw new ProfileNotFoundException();
            System.out.println("God evening");
            return mapper.mapping(all,ProfileDto.class);
+
        }
 
 
