@@ -22,4 +22,5 @@ public class ProfileService {
           return mapper.mapping(all,ProfileDto.class);
        }
 
+
 }
