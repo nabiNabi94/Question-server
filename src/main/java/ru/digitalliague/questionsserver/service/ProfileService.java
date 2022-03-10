@@ -21,6 +21,8 @@ public class ProfileService {
            if (all.isEmpty()) throw new ProfileNotFoundException();
            System.out.println("Gog master");
           return mapper.mapping(all,ProfileDto.class);
+
        }
+
 
 }
