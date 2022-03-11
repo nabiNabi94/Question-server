@@ -11,7 +11,6 @@ import ru.digitalliague.questionsserver.modelDTO.QuestionDto;
 import ru.digitalliague.questionsserver.repositories.QuestionRepository;
 import ru.digitalliague.questionsserver.util.Mapper;
 
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service

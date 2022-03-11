@@ -23,5 +23,9 @@ public class ProfileService {
 
        }
 
+       public void addProfile(ProfileDto profileDto){
+           Profile profile = mapper.mapping(profileDto, Profile.class);
+           repository.save(profile);
+       }
 
 }
