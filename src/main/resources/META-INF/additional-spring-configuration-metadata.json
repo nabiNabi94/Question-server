@@ -4,5 +4,15 @@
       "name": "spring.jpa.hibernate.jdbc.batch_size",
       "type": "java.lang.String",
       "description": "Description for spring.jpa.hibernate.jdbc.batch_size."
-  }
-] }
+    },
+    {
+      "name": "spring.jpa.hibernate.jdbc.batch_size",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.jdbc.batch_size."
+    },
+    {
+      "name": "spring.jpa.hibernate.dialect",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.dialect."
+    }
+  ] }

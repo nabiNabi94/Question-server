@@ -24,6 +24,14 @@ spring:
   liquibase:
     enabled: true
     change-log: db/changelog/db.changelog-mastrer.xml
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: root
+      database: test
+      port: 27017
+      host: localhost
 server:
   port: 9191
   servlet:

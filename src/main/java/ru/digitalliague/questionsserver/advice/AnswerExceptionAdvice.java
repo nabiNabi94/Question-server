@@ -2,10 +2,11 @@ package ru.digitalliague.questionsserver.advice;
 
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
-import ru.digitalliague.questionsserver.controllers.AnswerController;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import ru.digitalliague.questionsserver.excaptions.AnswerNotFoundException;
-import ru.digitalliague.questionsserver.hateoas.QuestionModelAssembler;
 
 @ControllerAdvice
 public class AnswerExceptionAdvice {

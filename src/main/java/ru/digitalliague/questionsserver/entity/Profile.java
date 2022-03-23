@@ -22,15 +22,8 @@ import java.util.Objects;
         @NamedEntityGraph(
                 name = "profile.fields",
                 attributeNodes = {
-                        @NamedAttributeNode(value = "questions", subgraph = "question.fields")
-                },
-                subgraphs = {
-                        @NamedSubgraph(
-                                name = "question.fields",
-                                attributeNodes = {
-                                        @NamedAttributeNode("name"),
-                                        @NamedAttributeNode("numOfCorr"),
-                                })
+                        @NamedAttributeNode(value = "id"),
+                        @NamedAttributeNode(value = "name"),
                 }
         )
 })
