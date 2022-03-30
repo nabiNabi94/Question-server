@@ -9,11 +9,9 @@
     <include file="changeset-create-answers-table-v.1.0.xml" relativeToChangelogFile="true"/>
     <include file="changeset-create-level-table-v.1.0.xml" relativeToChangelogFile="true"/>
     <include file="changeset-create-profile-table-v.1.0.xml" relativeToChangelogFile="true"/>
-<!--    <include file="changeset-create-test-table-v.1.0.xml" relativeToChangelogFile="true"/>-->
     <include file="changeset-create-constraint-table-v.1.0.xml" relativeToChangelogFile="true"/>
     <include file="changeset-insert-level-table-v.1.0.xml" relativeToChangelogFile="true"/>
     <include file="changeset-insert-profile-table-v.1.0.xml" relativeToChangelogFile="true"/>
-<!--    <include file="changeset-insert-test-table-v.1.0.xml" relativeToChangelogFile="true"/>-->
     <include file="changeset-insert-questions-table-v.1.0.xml" relativeToChangelogFile="true"/>
     <include file="changeset-insert-answers-table-v.1.0.xml" relativeToChangelogFile="true"/>
 
