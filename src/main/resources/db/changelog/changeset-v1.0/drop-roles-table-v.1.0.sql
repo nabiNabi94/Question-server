@@ -1,0 +1,1 @@
+drop table public.role_table

@@ -5,13 +5,13 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
 
-    <changeSet id="create-tests-table" author="V.Nabiev">
+    <changeSet id="create-users-table" author="V.Nabiev">
         <sqlFile dbms="postgresql"
                  encoding="utf8"
                  endDelimiter="\nGO"
                  splitStatements="true"
                  stripComments="true"
-                 path="create-tests-table-v.1.0.sql"
+                 path="create-users-table-v.1.0.sql"
                  relativeToChangelogFile="true"/>
         <rollback>
             <sqlFile dbms="postgresql"
@@ -19,7 +19,7 @@
                      endDelimiter="\nGO"
                      splitStatements="true"
                      stripComments="true"
-                     path="drop-tests-table-v.1.0.sql"
+                     path="drop-users-table-v.1.0.sql"
                      relativeToChangelogFile="true"/>
 
         </rollback>

@@ -1,6 +1,4 @@
-package ru.digitalliague.questionsserver.excaptions;
-
-import org.w3c.dom.ranges.RangeException;
+package ru.digitalliague.questionsserver.exceptions;
 
 public class QuestionNotFoundException extends RuntimeException {
 

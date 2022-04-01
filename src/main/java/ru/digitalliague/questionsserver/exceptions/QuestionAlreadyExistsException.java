@@ -1,4 +1,4 @@
-package ru.digitalliague.questionsserver.excaptions;
+package ru.digitalliague.questionsserver.exceptions;
 
 import ru.digitalliague.questionsserver.modelDTO.QuestionDto;
 

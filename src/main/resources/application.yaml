@@ -38,8 +38,10 @@ spring:
       initialize-schema: always
   shell:
     interactive:
-      enabled: true
+      enabled: false
 server:
   port: 9191
-  servlet:
-    context-path: /question-server
+logging:
+  level:
+    - error
+

@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import ru.digitalliague.questionsserver.excaptions.MismatchOfCorrectAnswersException;
-import ru.digitalliague.questionsserver.excaptions.QuestionAlreadyExistsException;
-import ru.digitalliague.questionsserver.excaptions.QuestionNotFoundException;
+import ru.digitalliague.questionsserver.exceptions.MismatchOfCorrectAnswersException;
+import ru.digitalliague.questionsserver.exceptions.QuestionAlreadyExistsException;
+import ru.digitalliague.questionsserver.exceptions.QuestionNotFoundException;
 
 @ControllerAdvice
 public class QuestionExceptionAdvice {

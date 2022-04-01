@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.digitalliague.questionsserver.entity.Question;
-import ru.digitalliague.questionsserver.excaptions.QuestionNotFoundException;
+import ru.digitalliague.questionsserver.exceptions.QuestionNotFoundException;
 import ru.digitalliague.questionsserver.hateoas.QuestionModelAssembler;
 import ru.digitalliague.questionsserver.modelDTO.QuestionDto;
 import ru.digitalliague.questionsserver.modelDTO.View;
